@@ -75,8 +75,19 @@ The scoring was calculated out of the distance from the places, and the number o
 
 ### 6-Visualizations.
 
-####<d> Scoring Plot.<d>_
+####  Scoring Plot
+
 <img src='/Images/Scoring.png'>
+
+As we can see within the Plot, the company to "steal" is *EXENT*.
+
+<img src='Images/Exent.jpg'>
+
+
+### Welcome Party
+<img src='Images\Party.jpg'>
+
+
 
 
 

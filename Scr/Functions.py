@@ -5,6 +5,8 @@ import json
 
 import numpy as np
 import os
+#______________Cleaning______________
+
 def clean_df():
     data= pd.read_json ('Labjson.csv')
     def dropcolumn(df,column):
@@ -47,3 +49,64 @@ def clean_df():
     SF['total_money_raised'] = SF['total_money_raised'].str.extract('(.*M|B)')
     SF=SF.dropna(subset=['total_money_raised'])
     return SF
+
+
+
+#______________Creating a dictionary______________
+
+def get_dist_category(latitude,longitude,category):
+
+    url = f"https://api.foursquare.com/v3/places/search?ll={latitude}%2C{longitude}&categories={category}"
+
+    headers = {
+        "accept": "application/json",
+        "Authorization":token_fsq}
+    response = requests.get(url, headers=headers).json()
+    newlist=[]
+    for lista in response["results"]:
+        distance = lista["distance"]
+        newlist.append(distance)
+
+    return newlist
+
+def get_dist_query(latitude,longitude,query):
+
+    url = f"https://api.foursquare.com/v3/places/nearby?ll={latitude}%2C{longitude}&query={query}"
+
+    headers = {
+        "accept": "application/json",
+        "Authorization": token_fsq}
+    response = requests.get(url, headers=headers).json()
+    newlist=[]
+    for lista in response["results"]:
+        distance = lista["distance"]
+        newlist.append(distance)
+
+    return newlist
+#______________Scoring______________
+
+def Score(dist_list):
+    Scoring=0
+    for i in dist_list:
+        if i<100:
+            Scoring+=50
+        elif 100<i<200:
+            Scoring+=30
+        elif 200<i<300:
+            Scoring+=20
+        elif 300<i<600:
+            Scoring+=10
+        
+    return Scoring    
+
+#______________Creating a dictionary______________
+
+
+keys = ['Exent', 'Serious Business', 'Kongregate','Curse']
+values = [3250, 2980, 2190,2100]
+
+def create_dictionary(keys, values):
+    result = {} 
+    for key, value in zip(keys, values):
+        result[key] = value
+    return result
