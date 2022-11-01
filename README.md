@@ -84,7 +84,7 @@ As we can see within the Plot, the company to "steal" is *EXENT*.
 <img src='Images/Exent.jpg'>
 
 
-### Welcome Party
+### Welcome Party!!!
 <img src='Images\Party.jpg'>
 
 
