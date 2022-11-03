@@ -28,7 +28,7 @@ The starting point is a MongoDB database, that includes more than 18 thousand co
 
 
 ### 2-Goal.
-The Goal is to find the most suitable place to set down our company. For that, we need to dive into the Database and use APIs to enrich the data following the Creteria given:
+The Goal is to find the most suitable place to set down our company. For that, we need to dive into the Database and use APIs to enrich the data following the Criteria given:
 
 + Designers like to go to design talks and share knowledge. 
 + There must be some nearby companies that also do design.
@@ -66,12 +66,12 @@ Export it to the Jupyter Notebook.
 Set up the Data and do the cleaning, handle missing, incorrect or  not required information, and state Functions to make the work more comfortable.
 After dropping the needless columns, proceed to 
 drop the rows with missing values that are required, as the coordinates.
-Onces the Database is cleant, we have a look to see which cities are the ones with more companies similar to the company we are creating, and chosing one of those. In this case with San Francisco, due to that my cleant Dataframe contains much more companies than the others.
-Next, using the APIs with the creteria, we start plotting the map to have an idea where could be the best area for it.
-Based on that, we get all the distances between the companies and the places gotten from Foursquare. 
+Onces the Database is cleant, we have a look to see which cities are the ones with more companies similar to the company we are creating, and choosing one of those. In this case with San Francisco, due to that my cleant Dataframe contains much more companies than the others.
+Next, using the APIs with the criteria, we start plotting the map to have an idea where could be the best area for it.
+Based on that, we get all the distances between the companies and the places got from Foursquare. 
 
 ### 5-Scoring.
-The scoring was calculated out of the distance from the places, and the number of people envolved in each point of the creteria.
+The scoring was calculated out of the distance from the places, and the number of people envolved in each point of the criteria.
 
 ### 6-Visualizations.
 
@@ -80,12 +80,13 @@ The scoring was calculated out of the distance from the places, and the number o
 <img src='/Images/Scoring.png'>
 
 As we can see within the Plot, the company to "steal" is *EXENT*.
+### Map
+https://rawcdn.githack.com/MaxTabo/PROJECT3/144b6af1759ec40d29d179984cc15fe295687df7/index.html
 
 <img src='Images/Exent.jpg'>
 
 
 ### Welcome Party!!!
-<img src='Images\Party.jpg'>
 
 
 
@@ -93,7 +94,8 @@ As we can see within the Plot, the company to "steal" is *EXENT*.
 
 
 
-<iframe src='index.html'></iframe>
+
+
 
 
 
